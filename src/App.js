@@ -141,4 +141,5 @@ class App extends React.Component {
   }
 }
 
-export default LoaderHOC ('emps')(App) ;
+// export default LoaderHOC ('emps')(App) ;
+export default App ;
