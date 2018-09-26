@@ -1,12 +1,12 @@
 import propTypes from 'prop-types';
 import React, { Component } from 'react';
-import LoaderHOC  from './hoc/loader';
+// import LoaderHOC  from './hoc/loader';
 import Emp from './emp';
 import { BrowserRouter as Router , Switch , Route , Link } from 'react-router-dom';
 
 // import './App.css';
-// import Home from './home';
-// import Login from './login';
+import Home from './home';
+import Login from './login';
 
 // import logo from './logo.svg';
 // import ReactDOM from 'react-dom';
@@ -25,12 +25,12 @@ class App extends React.Component {
         ]
     };
 
-    // delEmp = (index, e) =>{
-    //     const copyemps = Object.assign([],this.state.emps);
-    //     copyemps.splice(index,1);
-    //     console.log(copyemps + '11121121');
-    //     this.setState({emps:copyemps});
-    // };
+    delEmp = (index, e) =>{
+        const copyemps = Object.assign([],this.state.emps);
+        copyemps.splice(index,1);
+        console.log(copyemps + '11121121');
+        this.setState({emps:copyemps});
+    };
 
   //   constructor(props){
   //
@@ -104,15 +104,15 @@ class App extends React.Component {
             {/*<button onClick = {this.clearInput}>Clear</button>*/}
             {/*<div>*/}
                 <h2>Welcome to React Router Tutorial</h2>
-                {/*<ul>*/}
-                    {/*<li><Link to = '/' >Home</Link></li>*/}
-                    {/*<li><Link to = '/login' >Login</Link></li>*/}
-                {/*</ul>*/}
-                {/*<hr />*/}
-                {/*<Switch>*/}
-                    {/*<Route exact path='/' component={Home} />*/}
-                    {/*<Route exact path='/login' component={Login} />*/}
-                {/*</Switch>*/}
+                <ul>
+                    <li><Link to = '/' >Home</Link></li>
+                    <li><Link to = '/login' >Login</Link></li>
+                </ul>
+                <hr />
+                <Switch>
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/login' component={Login} />
+                </Switch>
                 <table>
                     <tbody>
                         {
