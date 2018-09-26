@@ -116,7 +116,7 @@ class App extends React.Component {
                 <table>
                     <tbody>
                         {
-                            this.state.emps.map((emp)=>{
+                            this.state.emps.map((emp,id)=>{
                                 return (<Emp salary={emp.salary} key={emp.id} deleteEvent={this.delEmp.bind(this,id)} >{emp.name}</Emp>)
                                 // return (<Emp salary={emp.salary} key={emp.id} >{emp.name}</Emp>)
                             })
